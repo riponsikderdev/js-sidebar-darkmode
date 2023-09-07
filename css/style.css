@@ -1,0 +1,179 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* COMMON CSS STARTS HERE */
+:root {
+    --text-color: black;
+    --bg-color: white;
+    --nav-color:#ddd;
+    --button-color:#fff;
+}
+
+.darkmode {
+    --text-color: white;
+    --bg-color: black;
+    --nav-color:#433f3fa5;
+    --button-color:#f6ff00;
+    transition: 0.8s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.container {
+    width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+body {
+    background-color: var(--bg-color);
+    transition: 0.9s;
+}
+
+/* COMMON CSS ENDS HERE */
+/* NAV STARTS HERE */
+nav {
+    background-color: var(--nav-color);
+    padding: 25px 0;
+}
+
+nav button {
+    background-color: var(--button-color);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* NAV ENDS HERE */
+/* SIDEBAR STARTS HERE */
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.9s;
+}
+
+.sidebar.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.siderbar_cnt {
+    width: 415px;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+    transform: translateX(-100%);
+    transition: 0.7s;
+}
+
+.sidebar.active .siderbar_cnt {
+    transform: translateX(0);
+}
+
+.siderbar_cnt .logo {
+    width: 80%;
+}
+
+.siderbar_cnt .btn {
+    width: 20%;
+    text-align: right;
+}
+
+.siderbar_cnt .btn button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.sidebar ul a {
+    color: rgb(52, 24, 50);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    display: block;
+    font-size: 25px;
+}
+
+/* SIDEBAR ENDS HERE */
+/* WRAPPER STARTS HERE */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h2 {
+    margin-right: 20px;
+    font-size: 80px;
+    color: var(--text-color);
+}
+
+.wrapper button {
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.wrapper button span {
+    height: 100%;
+    width: 100%;
+    display: block;
+    line-height: 50px;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.wrapper button .sunicon {
+    background-color: rgba(245, 207, 35, 0.749);
+}
+
+.wrapper button .moonicon {
+    background-color: rgba(10, 10, 6, 0.751);
+    color: white;
+}
+
+/* WRAPPER ENDS HERE */
